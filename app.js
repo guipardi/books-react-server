@@ -4,6 +4,7 @@ const app = express()
 const port = 8000
 const rotaLivro = require('./rotas/livros') 
 
+app.use(express.json())
 app.use('/livros', rotaLivro)
 
 app.listen(port, () => {
